@@ -31,6 +31,13 @@ from db import (
 from vision import save_face_image, recognize_person, detect_emotion, emotion_to_points
 from config import CLASSROOM_MODES, FACE_MATCH_THRESHOLD
 
+webrtc_streamer(
+  key="live_attendance_stream",
+  video_processor_factory=LiveAttendanceProcessor,
+  rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
+  media_stream_constraints={"video": True, "audio": False},
+)
+
 # ---- Engagement / attendance scoring config ----
 CLASS_DURATION_MIN = 55          # total class length in minutes
 SLOT_MIN = 5                     # 1 engagement sample ≈ 5 minutes
@@ -999,4 +1006,5 @@ with tab3:
                         csv_ses,
                         f"session_{selected_session.replace(' ', '_')}.csv",
                         "text/csv",
+
                     )
