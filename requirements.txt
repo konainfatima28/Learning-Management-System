@@ -1,0 +1,9 @@
+streamlit>=1.30
+streamlit-webrtc>=0.47
+av==10.0.0
+mediapipe>=0.10.0
+opencv-python>=4.8.0
+pandas>=2.0.0
+numpy>=1.23.0
+Pillow>=10.0.0
+SQLAlchemy>=2.0.0
