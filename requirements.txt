@@ -7,4 +7,5 @@ pillow
 pandas
 sqlalchemy
 psycopg2-binary   # if you use Postgres on render; else adjust
-av==10.0.0        # required by streamlit-webrtc (may be builtin on render if using apt)
+av==9.2.0        # required by streamlit-webrtc (may be builtin on render if using apt)
+
